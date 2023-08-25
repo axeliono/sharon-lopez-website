@@ -1,14 +1,13 @@
 <script lang="ts">
    let menuOpen = false;
-   import { darkModeChecked } from "$lib/stores.js";
-    let checked: boolean = $darkModeChecked;
+   import darkModeChecked from "$lib/index";
+    let checked: boolean = darkModeChecked;
    const openMenu = () => {
     menuOpen = !menuOpen
    }
 
    const changeMode = () => {
-    darkModeChecked.update((value: boolean) => value = !value)
-    console.log($darkModeChecked);
+    darkModeChecked
    }
 
 </script>
